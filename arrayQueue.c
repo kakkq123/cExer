@@ -1,5 +1,4 @@
 //은행번호 대기 관리 _배열로 큐 작성
-
 #include <stdio.h>
 #define QUEUE_CAPACITY 8
 
@@ -15,6 +14,12 @@ void enqueue(int n) {
 	queueArray[tail] = n;
 	printf("[%d]\n", queueArray[tail]);
 	tail++;
+	/*
+	tail=tail%QUEUE_CAPACITY;
+	*/
+	if (tail == QUEUE_CAPACITY)
+		tail = 0;
+
 	queueSize++;
 	
 	return 0;
@@ -25,6 +30,8 @@ void dequeue() {
 		return 0;
 	}
 	head++;
+	if (head == QUEUE_CAPACITY)
+		head = 0;
 	queueSize--;
 	printf("[%d]\n", queueArray[head]);
 	return 0;
