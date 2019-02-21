@@ -10,8 +10,7 @@ int main() {
 	double n, r,result;
 	printf("input n,r: ");
 	scanf_s("%lf %lf", &n,&r);
-	//scanf_s("%lf", &r);
-
+	
 	result=choose(n, r);
 
 	printf("\n%0.lf",result);
