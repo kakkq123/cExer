@@ -1,3 +1,9 @@
+
+/*
+2*n 크기의 타일이 있을 때
+1*2타일과 2*1타일을 가지고 채울 수 있는 총 타일의 개수
+*/
+
 #include <stdio.h>
 
 #define SIZE 1000
@@ -10,7 +16,7 @@ int minNumOfTiles(int n) {
 		return 2;
 	if (num[n] != 0)
 		return num[n];
-	return num[n] = (minNumOfTiles(n - 1) + minNumOfTiles(n- 2))%10007;
+	return num[n] = minNumOfTiles(n - 1) + minNumOfTiles(n- 2);
 }
 
 int main() {
