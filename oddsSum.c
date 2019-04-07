@@ -6,23 +6,23 @@
 int main() {
 
 	int n,sum=0;
-	printf("Á¤¼ö nÀ» ÀÔ·ÂÇÏ¼¼¿ä: ");
+	printf("ì •ìˆ˜ nì„ ì…ë ¥í•˜ì„¸ìš”: ");
 	scanf("%d", &n);
 
 	int * num = (int *)malloc(sizeof(int)*n);
 
-	//n°³ÀÇ °³¼ö¸¸Å­ Á¤¼ö ÀÔ·Â ¹ŞÀ½
-	printf("Á¤¼ö %d°³¸¦ ÀÔ·ÂÇÏ¼¼¿ä,\n",n);
+	//nê°œì˜ ê°œìˆ˜ë§Œí¼ ì •ìˆ˜ ì…ë ¥ ë°›ìŒ
+	printf("ì •ìˆ˜ %dê°œë¥¼ ì…ë ¥í•˜ì„¸ìš”,\n",n);
 	for (int i = 0; i < n; i++)
 		scanf("%d", &num[i]);
-	//È¦¼ö¸¸ °è»ê
+	//í™€ìˆ˜ë§Œ ê³„ì‚°
 	for (int i = 0; i < n; i++) {
 		if (num[i] % 2 == 1)
 			sum += num[i];
 
 	}
 	
-	printf("È¦¼öµéÀÇ ÇÕ: %d\n\n", sum);
+	printf("í™€ìˆ˜ë“¤ì˜ í•©: %d\n\n", sum);
 	free(num);
 	return 0;
 }
