@@ -37,7 +37,7 @@ void quick_sort(int low, int high) {
 int main() {
 	cin >> n >> k;
 	for (int i = 0; i < n; i++) 
-		scanf_s("%d", & a[i]);
+		scanf("%d", & a[i]);
 	quick_sort(0, n - 1);
 	cout << a[k - 1];
 	return 0;
